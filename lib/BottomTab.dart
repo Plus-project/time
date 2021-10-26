@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:time/Alarm.dart';
-import 'package:time/Clock.dart';
-import 'package:time/StopWatch.dart';
-import 'package:time/Timer.dart';
+import 'package:time/Alarm/Alarm.dart';
+import 'package:time/Clock/Clock.dart';
+import 'package:time/StopWatch/StopWatch.dart';
+import 'package:time/Timer/Timer.dart';
 
 class BottomTabPage extends StatefulWidget {
   @override
