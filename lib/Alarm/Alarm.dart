@@ -1,16 +1,30 @@
 import 'package:flutter/material.dart';
 
-class AlarmPage extends StatelessWidget {
+class AlarmPage extends StatefulWidget {
+  @override
+  _AlarmPageState createState() => _AlarmPageState();
+}
+
+List<String> alarmList = ['00:00', '00:00', '00:00'];
+
+class _AlarmPageState extends State<AlarmPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
-      body: Center(
-        child: Text(
-          "Alarm Page",
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body: ListView.builder(
+          itemCount: alarmList.length,
+          itemBuilder: (BuildContext context, int index) {
+            return Column(
+              children: [
+                ListTile(
+                  title: Text(alarmList[index]),
+                ),
+                Divider(
+                  color: Colors.lightBlue,
+                )
+              ],
+            );
+          }),
     );
   }
 }
