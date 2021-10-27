@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'ListAdd.dart';
 
 class AlarmPage extends StatefulWidget {
   @override
@@ -14,17 +15,33 @@ class _AlarmPageState extends State<AlarmPage> {
       body: ListView.builder(
           itemCount: alarmList.length,
           itemBuilder: (BuildContext context, int index) {
-            return Column(
-              children: [
-                ListTile(
-                  title: Text(alarmList[index]),
+            return Card(
+              child: ListTile(
+                title: Text(
+                  alarmList[index],
+                  style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.lightBlue,
+                  ),
                 ),
-                Divider(
-                  color: Colors.lightBlue,
-                )
-              ],
+              ),
             );
           }),
+      floatingActionButton: ElevatedButton(
+        onPressed: () async {
+          final newListText = await Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) {
+              return ListAdd();
+            }),
+          );
+          if (newListText != null) {
+            setState(() {
+              alarmList.add(newListText);
+            });
+          }
+        },
+        child: Icon(Icons.add),
+      ),
     );
   }
 }
