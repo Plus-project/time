@@ -6,7 +6,7 @@ class AlarmPage extends StatefulWidget {
   _AlarmPageState createState() => _AlarmPageState();
 }
 
-List<String> alarmList = ['00:00', '00:00', '00:00'];
+List<String> alarmList = [];
 
 class _AlarmPageState extends State<AlarmPage> {
   @override
@@ -27,20 +27,12 @@ class _AlarmPageState extends State<AlarmPage> {
               ),
             );
           }),
-      floatingActionButton: ElevatedButton(
-        onPressed: () async {
-          final newListText = await Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) {
-              return ListAdd();
-            }),
-          );
-          if (newListText != null) {
-            setState(() {
-              alarmList.add(newListText);
-            });
-          }
-        },
+      floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
+        onPressed: () {
+          alarmList.add('00:00');
+          setState(() {});
+        },
       ),
     );
   }
