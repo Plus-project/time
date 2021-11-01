@@ -1,7 +1,10 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'ListAdd.dart';
 
 class AlarmPage extends StatefulWidget {
+  const AlarmPage({Key? key}) : super(key: key);
+
   @override
   _AlarmPageState createState() => _AlarmPageState();
 }
@@ -25,7 +28,7 @@ class _AlarmPageState extends State<AlarmPage> {
               background: Container(
                 alignment: Alignment.centerRight,
                 color: Colors.red,
-                child: Padding(
+                child: const Padding(
                   padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
                   child: Icon(Icons.delete_outline),
                 ),
@@ -33,13 +36,14 @@ class _AlarmPageState extends State<AlarmPage> {
               child: Card(
                 child: ListTile(
                   title: Text(alarmList[index],
-                      style: TextStyle(fontSize: 30, color: Colors.lightBlue)),
+                      style: const TextStyle(
+                          fontSize: 30, color: Colors.lightBlue)),
                 ),
               ),
             );
           }),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         onPressed: () {
           alarmList.add('00:00');
           setState(() {});
