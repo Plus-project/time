@@ -17,35 +17,35 @@ class BottomTabPage extends StatefulWidget {
 
 class _BottomTabPageState extends State<BottomTabPage> {
   int _currentIndex = 0;
-  final _pageWidgets = [const ClockPage(), const AlarmPage(), const TimerPage(), const StopWatchPage()];
+  final _pageWidgets = [
+    const ClockPage(),
+    const AlarmPage(),
+    const TimerPage(),
+    const StopWatchPage()
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white.withOpacity(0.0),
-        elevation: 0.0,
-      ),
       extendBodyBehindAppBar: true,
       body: _pageWidgets.elementAt(_currentIndex),
       bottomNavigationBar: BottomNavigationBar(
-        // ignore: prefer_const_literals_to_create_immutables
-        items: <BottomNavigationBarItem>[
-          const BottomNavigationBarItem(
-              icon: Icon(Icons.access_time), title: Text('Clock')),
-          const BottomNavigationBarItem(
-              icon: Icon(Icons.access_alarm), title: Text('Alarm')),
-          const BottomNavigationBarItem(
-              icon: Icon(Icons.av_timer), title: Text('Timer')),
-          const BottomNavigationBarItem(
-              icon: Icon(Icons.shutter_speed), title: Text('StopWatch')),
-        ],
-        currentIndex: _currentIndex,
-        fixedColor: Colors.blueAccent,
-        onTap: _onItemTapped,
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.white,
-      ),
+          // ignore: prefer_const_literals_to_create_immutables
+          items: <BottomNavigationBarItem>[
+            const BottomNavigationBarItem(
+                icon: Icon(Icons.access_time), title: Text('Clock')),
+            const BottomNavigationBarItem(
+                icon: Icon(Icons.access_alarm), title: Text('Alarm')),
+            const BottomNavigationBarItem(
+                icon: Icon(Icons.av_timer), title: Text('Timer')),
+            const BottomNavigationBarItem(
+                icon: Icon(Icons.shutter_speed), title: Text('StopWatch')),
+          ],
+          currentIndex: _currentIndex,
+          fixedColor: Colors.blueAccent,
+          onTap: _onItemTapped,
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: Colors.white),
     );
   }
 

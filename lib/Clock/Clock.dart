@@ -11,7 +11,7 @@ class ClockPage extends StatelessWidget {
       backgroundColor: Colors.red,
       body: Center(
         child: Text(
-          "Time Page",
+          "Clock Page",
           style: TextStyle(fontSize: 20),
         ),
       ),

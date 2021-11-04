@@ -44,6 +44,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "date_format",
+      "rootUri": "file:///Users/rui/development/flutter/.pub-cache/hosted/pub.dartlang.org/date_format-2.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "fake_async",
       "rootUri": "file:///Users/rui/development/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0",
       "packageUri": "lib/",
@@ -56,8 +62,20 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_datetime_picker",
+      "rootUri": "file:///Users/rui/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_datetime_picker-1.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_lints",
       "rootUri": "file:///Users/rui/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_picker",
+      "rootUri": "file:///Users/rui/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_picker-2.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -70,6 +88,12 @@
     {
       "name": "flutter_test",
       "rootUri": "file:///Users/rui/development/flutter/packages/flutter_test",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///Users/rui/development/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -158,7 +182,7 @@
       "languageVersion": "2.15"
     }
   ],
-  "generated": "2021-11-01T12:09:04.783187Z",
+  "generated": "2021-11-04T12:14:05.128861Z",
   "generator": "pub",
   "generatorVersion": "2.15.0-244.0.dev"
 }
